@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Slack Emojis",
+  "description": "This extension replaces emojis in facebook messenger with their emojis from slack",
+  "version": "1.0",
+  "homepage_url": "https://github.com/KMarshland/messenger-emojis",
+
+  "browser_action": {
+    "default_title": "Emojify"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/messages/*"],
+      "js": ["jquery.js", "emojis.js", "inject.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab"
+  ]
+}

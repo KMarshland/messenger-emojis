@@ -21,7 +21,7 @@ https.get(url, res => {
             return;
         }
 
-        fs.writeFile("emojis.json", JSON.stringify(body.emoji, null, 2), function(err) {
+        fs.writeFile("emojis.js", 'window.SLACK_EMOJI_URLS = ' + JSON.stringify(body.emoji, null, 2), function(err) {
             if(err) {
                 return console.log(err);
             }
