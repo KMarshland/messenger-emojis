@@ -35,7 +35,9 @@
             $(this).html(content);
         });
 
-        replacementInterval = setInterval(replace, 1000);
+        if (!replacementInterval) {
+            replacementInterval = setInterval(replace, 1000);
+        }
     }
 
     replace();
